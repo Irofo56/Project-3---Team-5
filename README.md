@@ -37,7 +37,16 @@ The goal is to provide a clear, visual perspective on short-term market behavior
 
 ## Data Source
 
-All data was pre-loaded into an SQLite database (`market_data.db`). Each table represents a different market asset or tech stock, with daily closing prices indexed by date.
+Historical financial data was downloaded using the **Yahoo Finance API** via the `yfinance` Python library.
+
+- Tickers include:  
+  - `^GSPC` (S&P 500), `^VIX` (VIX), `GC=F` (Gold), `CL=F` (Crude Oil)  
+  - `AAPL`, `AMZN`, `MSFT`, `NVDA`, `GOOGL` (tech stocks)
+
+Two custom scripts were used for data handling:
+
+- `download_data.py` — Downloads CSV files for each ticker using `yfinance`
+- `load_to_sqlite.py` — Loads the cleaned CSVs into a local SQLite database (`market_data.db`)
 
 ---
 
@@ -67,15 +76,16 @@ All data was pre-loaded into an SQLite database (`market_data.db`). Each table r
 - Required libraries:
 
 ```bash
-pip install pandas matplotlib seaborn ipywidgets
+pip install pandas matplotlib seaborn ipywidgets yfinance
 ```
 
 ### Run the Notebook
 
-1. Open the notebook in Jupyter.
-2. Ensure `market_data.db` is in the same directory.
-3. Run all cells.
-4. Use the dropdown to explore different visualizations.
+1. Run `download_data.py` to fetch the latest data.
+2. Run `load_to_sqlite.py` to populate `market_data.db`.
+3. Open the notebook in Jupyter.
+4. Run all cells.
+5. Use the dropdown to explore different visualizations.
 
 ---
 
