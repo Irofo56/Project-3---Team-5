@@ -1,5 +1,5 @@
 # Project-3---Team-5
-# Post-Inauguration Stock Market Trends
+# 60-Days Post-Inauguration Stock Market Trends
 
 ## Project Overview
 
@@ -83,8 +83,7 @@ pip install pandas matplotlib seaborn ipywidgets yfinance
 
 1. Run `download_data.py` to fetch the latest data.
 2. Run `load_to_sqlite.py` to populate `market_data.db`.
-3. Open the notebook in Jupyter.
-4. Run all cells.
+3. Open the Jupyter notebook in VS Code.
 5. Use the dropdown to explore different visualizations.
 
 ---
@@ -98,6 +97,6 @@ pip install pandas matplotlib seaborn ipywidgets yfinance
 
 ---
 
-## Author
+## Authors
 
 Created by **Liaman Aghayeva**, **Lindsey Davies**, **Willa Grimes**, and **Isaac Ofori** as part of a data visualization project for the Columbia Engineering Data Analytics Boot Camp.
